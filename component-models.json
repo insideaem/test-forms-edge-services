@@ -3015,16 +3015,21 @@
           },
           {
             "component": "select",
-            "name": "enumIcons",
-            "label": "Options (Icons)",
+            "label": "Icon",
+            "name": "iconType",
+            "valueType": "string",
             "options": [
               {
-                "name": "Hour",
-                "value": "hour"
+                "name": "String",
+                "value": "string"
               },
               {
-                "name": "Calendar",
-                "value": "calendar"
+                "name": "Boolean",
+                "value": "boolean"
+              },
+              {
+                "name": "Number",
+                "value": "number"
               }
             ]
           },
