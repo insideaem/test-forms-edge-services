@@ -3014,9 +3014,24 @@
             ]
           },
           {
+            "component": "select",
+            "name": "enumIcons",
+            "label": "Options (Icons)",
+            "options": [
+              {
+                "name": "Hour",
+                "value": "hour"
+              },
+              {
+                "name": "Calendar",
+                "value": "calendar"
+              }
+            ]
+          },
+          {
             "component": "text",
             "name": "enum",
-            "label": "Options (Data Value)",
+            "label": "Options (Data Value/Icon above)",
             "valueType": "string",
             "multi": true,
             "required": true
