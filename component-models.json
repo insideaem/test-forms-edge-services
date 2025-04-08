@@ -3029,7 +3029,7 @@
             "multi": true
           },
           {
-            "component": "text",
+            "component": "select",
             "label": "Options (Icon)",
             "name": "enumIcons",
             "valueType": "string",
