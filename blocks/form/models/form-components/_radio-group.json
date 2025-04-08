@@ -35,7 +35,9 @@
                     "label": "Basic",
                     "collapsible": false,
                     "fields": [
-                        
+                        {
+                            "...": "../form-common/_basic-select-fields.json#/fields"
+                        },
                         {
                             "component": "select",
                             "name": "variant",
