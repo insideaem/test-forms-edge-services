@@ -585,7 +585,7 @@
           {
             "component": "text",
             "name": "enumNames",
-            "label": "Options (Display Value)",
+            "label": "Options (Display Value/Icon below)",
             "valueType": "string",
             "multi": true
           },
