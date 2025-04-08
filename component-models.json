@@ -589,7 +589,6 @@
             "valueType": "string",
             "multi": true
           },
-          ,
           {
             "component": "select",
             "name": "enumIcons",
