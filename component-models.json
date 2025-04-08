@@ -585,26 +585,9 @@
           {
             "component": "text",
             "name": "enumNames",
-            "label": "Options (Display Value/Icon below)",
+            "label": "Options (Display Value)",
             "valueType": "string",
             "multi": true
-          },
-          {
-            "component": "select",
-            "name": "enumIcons",
-            "label": "Options (Icon)",
-            "valueType": "string",
-            "value": "",
-            "options": [
-              {
-                "name": "Hour",
-                "value": "hour"
-              },
-              {
-                "name": "Calendar",
-                "value": "calendar"
-              }
-            ]
           },
           {
             "component": "text",
