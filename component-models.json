@@ -3033,6 +3033,7 @@
             "label": "Options (Icon)",
             "name": "enumIcons",
             "valueType": "string",
+            "multi": true,
             "options": [
               {
                 "name": "Hour",
