@@ -98,6 +98,21 @@
           }
         },
         {
+          "title": "Navigation",
+          "id": "nav",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/wcm/components/navigation/v2/navigation",
+                "template": {
+                  "name": "Navigation",
+                  "model": "nav"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Card",
           "id": "card",
           "plugins": {
