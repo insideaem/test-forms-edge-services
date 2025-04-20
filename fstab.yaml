@@ -1,5 +1,1 @@
-mountpoints:
-  /:
-    url: https://author-p137277-e1382426.adobeaemcloud.com/bin/franklin.delivery/insideaem/test-forms-edge-services/main
-    type: "markup"
-    suffix: ".html"
+
