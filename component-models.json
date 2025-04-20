@@ -112,6 +112,24 @@
     ]
   },
   {
+    "id": "nav",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "navigationRoot",
+        "label": "Navigation Root",
+        "multi": false
+      },
+      {
+        "component": "boolean",
+        "name": "collectAllPages",
+        "label": "Collect All Pages",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
