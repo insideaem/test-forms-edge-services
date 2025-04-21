@@ -103,7 +103,7 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/wcm/components/navigation/v2/navigation",
+                "resourceType": "msd-sites/components/navigation",
                 "template": {
                   "name": "Navigation",
                   "model": "nav"
