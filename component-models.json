@@ -122,6 +122,13 @@
         "multi": false
       },
       {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "links",
+        "label": "Links",
+        "multi": true
+      },
+      {
         "component": "boolean",
         "name": "collectAllPages",
         "label": "Collect All Pages",
