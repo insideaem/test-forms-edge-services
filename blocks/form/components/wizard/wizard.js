@@ -65,24 +65,33 @@ export class WizardLayout {
     }
     const navigateTo = valid ? this.getEligibleSibling(current, forward) : current;
 
-    if (navigateTo && (current !== navigateTo || forward)) {
-      alert("Saving data, please wait");
-      window.setTimeout(() => {
-        current.classList.remove('current-wizard-step');
-        navigateTo.classList.add('current-wizard-step');
-        // add/remove active class from menu item
-        const navigateToMenuItem = panel.querySelector(`li[data-index="${navigateTo.dataset.index}"]`);
-        currentMenuItem.classList.remove('wizard-menu-active-item');
-        navigateToMenuItem.classList.add('wizard-menu-active-item');
-        const event = new CustomEvent('wizard:navigate', {
-          detail: {
-            prevStep: { id: current.id, index: +current.dataset.index },
-            currStep: { id: navigateTo.id, index: +navigateTo.dataset.index },
-          },
-          bubbles: false,
-        });
-        panel.dispatchEvent(event);
-      }, "2000");
+    function resume(){
+      current.classList.remove('current-wizard-step');
+      navigateTo.classList.add('current-wizard-step');
+      // add/remove active class from menu item
+      const navigateToMenuItem = panel.querySelector(`li[data-index="${navigateTo.dataset.index}"]`);
+      currentMenuItem.classList.remove('wizard-menu-active-item');
+      navigateToMenuItem.classList.add('wizard-menu-active-item');
+      const event = new CustomEvent('wizard:navigate', {
+        detail: {
+          prevStep: { id: current.id, index: +current.dataset.index },
+          currStep: { id: navigateTo.id, index: +navigateTo.dataset.index },
+        },
+        bubbles: false,
+      });
+      panel.dispatchEvent(event);
+    }
+
+    if (navigateTo && (current !== navigateTo)) {
+       if(forward){
+         alert("Saving data, please wait");
+         window.setTimeout(() => {
+            resume();
+          }, "2000");
+       }
+      else{
+        resume();
+      }
     }
   }
 
