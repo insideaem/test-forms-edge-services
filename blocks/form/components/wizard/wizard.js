@@ -65,7 +65,7 @@ export class WizardLayout {
     }
     const navigateTo = valid ? this.getEligibleSibling(current, forward) : current;
 
-    if (navigateTo && current !== navigateTo) {
+    if (navigateTo && (current !== navigateTo || forward)) {
       alert("Saving data, please wait");
       window.setTimeout(() => {
         current.classList.remove('current-wizard-step');
