@@ -87,7 +87,7 @@ export class WizardLayout {
          alert("Saving data, please wait");
          window.setTimeout(() => {
             resume();
-          }, "2000");
+          }, "1000");
        }
       else{
         resume();
