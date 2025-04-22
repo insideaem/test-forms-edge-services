@@ -60,9 +60,9 @@ export class WizardLayout {
     const currentMenuItem = panel.querySelector('.wizard-menu-active-item');
 
     let valid = true;
-    if (forward) {
+    /*if (forward) {
       valid = this.validateContainer(current);
-    }
+    }*/
     const navigateTo = valid ? this.getEligibleSibling(current, forward) : current;
 
     function resume(){
