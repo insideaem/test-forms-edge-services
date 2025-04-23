@@ -60,7 +60,7 @@ export class WizardLayout {
     const currentMenuItem = panel.querySelector('.wizard-menu-active-item');
 
     let valid = true;
-    /*if (forward) {
+    /* ###change### Prevent validation if (forward) {
       valid = this.validateContainer(current);
     }*/
     const navigateTo = valid ? this.getEligibleSibling(current, forward) : current;
@@ -84,6 +84,7 @@ export class WizardLayout {
 
     if (navigateTo && (current !== navigateTo)) {
        if(forward){
+         // ###change###
          alert("Saving data, please wait");
          window.setTimeout(() => {
             resume();
@@ -93,6 +94,28 @@ export class WizardLayout {
         resume();
       }
     }
+  }
+
+  gotoItem(panel, itemName) {
+    const current = panel.querySelector('.current-wizard-step');
+    const currentMenuItem = panel.querySelector('.wizard-menu-active-item');
+
+    const navigateTo = panel.querySelector(`fieldset[name="${itemName}"]`);
+    
+    current.classList.remove('current-wizard-step');
+    navigateTo.classList.add('current-wizard-step');
+    // add/remove active class from menu item
+    const navigateToMenuItem = panel.querySelector(`li[data-index="${navigateTo.dataset.index}"]`);
+    currentMenuItem.classList.remove('wizard-menu-active-item');
+    navigateToMenuItem.classList.add('wizard-menu-active-item');
+    const event = new CustomEvent('wizard:navigate', {
+      detail: {
+        prevStep: { id: current.id, index: +current.dataset.index },
+        currStep: { id: navigateTo.id, index: +navigateTo.dataset.index },
+      },
+      bubbles: false,
+    });
+    panel.dispatchEvent(event);
   }
 
   static handleMutation(panel, mutationsList) {
@@ -193,6 +216,10 @@ export class WizardLayout {
     panel.querySelector('fieldset')?.classList.add('current-wizard-step');
     panel.classList.add('wizard');
     // panel.classList.add('left');
+
+    // resume from last step from user profile
+    const step == 'step-2';
+    gotoItem('step-2')
   }
 }
 
@@ -200,6 +227,7 @@ const layout = new WizardLayout();
 
 export default function wizardLayout(panel) {
   layout.applyLayout(panel);
+  
   return panel;
 }
 
