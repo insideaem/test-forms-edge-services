@@ -218,7 +218,7 @@ export class WizardLayout {
     // panel.classList.add('left');
 
     // resume from last step from user profile
-    const step = 'step-2';
+    const step = window.location.hash.substring(1) || 'step-1';
     this.gotoItem(panel, step)
   }
 }
