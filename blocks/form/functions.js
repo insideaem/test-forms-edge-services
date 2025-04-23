@@ -29,7 +29,7 @@ function days(endDate, startDate) {
 }
 
 function resumeForm(){
-  alert('Resume form');
+  window.alert('Resume form');
   console.log(this);
 }
 
