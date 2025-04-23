@@ -29,7 +29,6 @@ function days(endDate, startDate) {
 }
 
 function resumeForm(){
-  window.alert('Resume form');
   console.log(this);
 }
 
