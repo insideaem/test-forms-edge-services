@@ -28,5 +28,10 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
+function resumeForm(){
+  alert('Resume form');
+  console.log(this);
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days };
+export { resumeForm, getFullName, days };
