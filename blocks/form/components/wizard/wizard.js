@@ -219,7 +219,7 @@ export class WizardLayout {
 
     // resume from last step from user profile
     const step = 'step-2';
-    this.gotoItem(step)
+    this.gotoItem(panel, step)
   }
 }
 
