@@ -244,7 +244,13 @@ function dateToDaysSinceEpoch(date) {
   return Math.floor(dateObj.getTime() / (1000 * 60 * 60 * 24));
 }
 
+function resumeForm(){
+  alert('Resume form');
+  console.log(this);
+}
+
 export {
+  resumeForm,
   externalize,
   validateURL,
   navigateTo,
